@@ -6,8 +6,6 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 
-
-
 server.get('/api/users', (request, response) => {
     response.json([
         {user_id: 1,
@@ -26,7 +24,7 @@ server.post('/api/login', (request, response, next) => {
     if (request.username && request.password) {
         response.json({ message: 'Welcome!' });
     } else {
-        next({status: 403, message: 'Access is forbidden without proper credentials' });
+        next({status: 403, message: 'Access is forbidden without proper credentials.' });
     }
 });
 

@@ -6,6 +6,8 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 
+
+
 server.get('/api/users', (request, response) => {
     response.json([
         {user_id: 1,
